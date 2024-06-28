@@ -1,0 +1,36 @@
+{% extends 'base.html'%}
+
+
+
+{% block content%}
+<div style="width: 30%; height: 500px; margin:auto" class="p-5 border border-info">
+
+  
+  <form method='POST' action='/form_app/about/' >
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="exampleInputName" class="form-label"><b>Enter Your name</b></label>
+      <input type="text" class="form-control" id="exampleInputName" aria-describedby="emailHelp" placeholder="Your Full name" name='username' >
+    <div class="mb-3">
+      <label for="exampleInputEmail" class="form-label"><b>Enter Your Email</b></label>
+      <input type="Email" class="form-control" id="exampleInputEmail" placeholder="Your Email" name='email' >
+    </div>
+
+    <div class="form-floating mb-2">
+      <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="select">
+        <option selected>Open this select menu</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+      
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+
+</div>
+
+{% endblock %}

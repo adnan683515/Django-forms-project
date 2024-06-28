@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+
+{% block content  %}
+<div style="width: 30%; height: auto; margin:auto" class="p-5 border border-info ">
+
+<form method = 'POST' enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+{% endblock  %}
